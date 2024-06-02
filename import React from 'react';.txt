@@ -1,0 +1,128 @@
+import React from 'react';
+import { Text, View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { Avatar, Button, Card } from 'react-native-paper';
+
+const CatalogHeader = () => {
+  return (
+    <View style={styles.header}>
+      <Text style={styles.headerText}>Catalogo</Text>
+    </View>
+  );
+};
+
+const LeftContent = props => <Avatar.Icon {...props} icon="tag" backgroundColor="white" color='#808080' />
+
+const Catalog = () => {
+  return (
+    <View style={styles.container}>
+      <CatalogHeader />
+      <ScrollView>
+        <Card style={styles.cardbox}>
+          <Card.Title title="Corte Social" left={LeftContent} titleStyle={styles.title} />
+          <Card.Content>
+            <Text variant="bodyMedium"></Text>
+          </Card.Content>
+          <Card.Cover source={{ uri: 'https://i.pinimg.com/564x/92/f6/2f/92f62fb704b1d986c142a8e832a6a46f.jpg' }} style={styles.img} />
+          <TouchableOpacity>
+            <Button style={styles.button}>Agendar</Button>
+          </TouchableOpacity>
+        </Card>
+
+        <Card style={styles.cardbox}>
+          <Card.Title title="Undercut" left={LeftContent} titleStyle={styles.title} />
+          <Card.Content>
+            <Text variant="bodyMedium"></Text>
+          </Card.Content>
+          <Card.Cover source={{ uri: 'https://i.pinimg.com/564x/75/e6/fd/75e6fd6c270d408a6f43f9656711d1ec.jpg' }} style={styles.img} />
+          <TouchableOpacity>
+            <Button style={styles.button}>Agendar</Button>
+          </TouchableOpacity>
+        </Card>
+
+        <Card style={styles.cardbox}>
+          <Card.Title title="Top knot" left={LeftContent} titleStyle={styles.title} />
+          <Card.Content>
+            <Text variant="bodyMedium"></Text>
+          </Card.Content>
+          <Card.Cover source={{ uri: 'https://i.pinimg.com/564x/8b/c4/cb/8bc4cb0c9d6a13f7cc00cef12f4a9fb4.jpg' }} style={styles.img} />
+          <TouchableOpacity>
+            <Button style={styles.button}>Agendar</Button>
+          </TouchableOpacity>
+        </Card>
+
+        <Card style={styles.cardbox}>
+          <Card.Title title="Militar" left={LeftContent} titleStyle={styles.title} />
+          <Card.Content>
+            <Text variant="Pompadour"></Text>
+          </Card.Content>
+          <Card.Cover source={{ uri: 'https://i.pinimg.com/564x/64/5e/39/645e395eccbc53324f32c5372fa6e036.jpg' }} style={styles.img} />
+          <TouchableOpacity>
+            <Button style={styles.button}>Agendar</Button>
+          </TouchableOpacity>
+        </Card>
+
+        <Card style={styles.cardbox}>
+          <Card.Title title="Razor part" left={LeftContent} titleStyle={styles.title} />
+          <Card.Content>
+            <Text variant="bodyMedium"></Text>
+          </Card.Content>
+          <Card.Cover source={{ uri: 'https://i.pinimg.com/564x/90/87/e3/9087e38e3f9ff1887af22fa85503ba04.jpg' }} style={styles.img} />
+          <TouchableOpacity>
+            <Button style={styles.button}>Agendar</Button>
+          </TouchableOpacity>
+        </Card>
+
+        <Card style={styles.cardbox}>
+          <Card.Title title="Disfarçado" left={LeftContent} titleStyle={styles.title} />
+          <Card.Content>
+            <Text variant="bodyMedium"></Text>
+          </Card.Content>
+          <Card.Cover source={{ uri: 'https://i.pinimg.com/564x/2c/33/e9/2c33e968bb9cee7e973462865f50a0fa.jpg' }} style={styles.img} />
+          <TouchableOpacity>
+            <Button style={styles.button}>Agendar</Button>
+          </TouchableOpacity>
+        </Card>
+      </ScrollView>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#F0F0F0',
+  },
+  header: {
+    backgroundColor: '#808080',
+    paddingVertical: 40,
+    paddingHorizontal: 20,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  headerText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'white',
+    top: 20,
+  },
+  cardbox: {
+    margin: 10,
+    backgroundColor: '#808080',
+  },
+  img: {
+    padding: 10,
+    height:500,
+    backgroundColor: '#808080',
+  },
+  button:{
+    fontSize: 17, 
+    backgroundColor: 'white',
+    width:100,
+  },
+  title: {
+    color: 'white', 
+    fontSize: 18, 
+  },
+});
+
+export default Catalog;
